@@ -1,0 +1,30 @@
+//Calculator MAIN Class
+
+package com.java.assignment1;
+
+import java.util.Scanner;
+
+public class Calculatormain {
+
+	public static void main(String[] args) { //MAIN FUNCTION
+		
+		Scanner S = new Scanner(System.in); //CREATING SCANNER OBJECT
+		Calculator calc = new Calculator(); //CREATING CALCULATOR OBJECT FROM CLASS 
+		
+		int x,y;
+		System.out.println("enter the value of x"); //Reading values
+		x=S.nextInt();
+		System.out.println("enter the value of y"); //Reading values
+        y=S.nextInt();
+		int z=calc.add(x, y); //Invoking Add function from calc object 
+		System.out.println("sum of a and b is " +z);
+		int k=calc.sub(x, y);//Invoking sub function from calc object
+		System.out.println("difference of a and b is " +k);
+		calc.mul(x, y); //Invoking mul function from calc object
+		calc.div(x, y);//Invoking div function from calc object
+		S.close(); //Closing Scanner
+		
+
+	}
+
+}
